@@ -53,9 +53,6 @@ function M.run()
   -- delete trailing whitespace
   vim.cmd([[:keepjumps keeppatterns %s/\s\+$//e]])
 
-  -- delete new lines @ eof
-  vim.cmd([[:keepjumps keeppatterns silent! 0;/^\%(\n*.\)\@!/,$d_]])
-
   reset_cursor_pos(cursor_pos)
 end
 
